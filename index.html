@@ -6,7 +6,7 @@
 <title>Luke & Hiba | 20 March 2027</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,17 +22,21 @@ html{
 
 body{
     font-family:'Inter', sans-serif;
-    background:#f5f3ef;
-    color:#222;
+    background:#0f0f0f;
+    color:#e8dfcf;
     line-height:1.7;
 }
+
+/* NAVIGATION */
 
 nav{
     position:fixed;
     top:0;
     width:100%;
-    background:rgba(20,20,20,0.95);
-    padding:20px 0;
+    background:rgba(10,10,10,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(232,223,207,.1);
+    padding:22px 0;
     z-index:1000;
 }
 
@@ -45,124 +49,181 @@ nav ul{
 }
 
 nav a{
-    color:white;
+    color:#e8dfcf;
     text-decoration:none;
-    font-size:0.9rem;
-    letter-spacing:2px;
+    letter-spacing:3px;
+    font-size:0.85rem;
     text-transform:uppercase;
 }
+
+nav a:hover{
+    color:#d4b27a;
+}
+
+/* HERO */
 
 .hero{
     min-height:100vh;
     background:
-      linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.35)),
-      url('background.jpg');
+    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+    url('background.jpg');
+
     background-size:cover;
     background-position:center;
-    background-repeat:no-repeat;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
-    color:white;
+    color:#f4efe6;
     padding:20px;
 }
 
 .hero-content{
-    max-width:700px;
+    max-width:800px;
+}
+
+.hero-content p:first-child{
+    letter-spacing:4px;
+    text-transform:uppercase;
+    margin-bottom:25px;
+    font-size:0.95rem;
 }
 
 .hero h1{
     font-family:'Playfair Display', serif;
-    font-size:5rem;
+    font-size:5.8rem;
+    font-weight:600;
     margin-bottom:20px;
 }
 
 .hero p{
-    font-size:1.2rem;
-    letter-spacing:3px;
+    font-size:1.15rem;
 }
 
+/* COUNTDOWN */
+
+.countdown{
+    margin-top:50px;
+    font-family:'Playfair Display', serif;
+    font-size:2.3rem;
+    color:#d4b27a;
+}
+
+/* GENERAL SECTIONS */
+
 .section{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
-    padding:100px 25px;
+    padding:110px 25px;
 }
 
 .section h2{
+    text-align:center;
     font-family:'Playfair Display', serif;
     font-size:3rem;
-    margin-bottom:30px;
-    text-align:center;
+    margin-bottom:60px;
+    color:#d4b27a;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
 }
 
 .card{
-    background:white;
+    background:#171717;
+    border:1px solid rgba(212,178,122,.18);
+    border-radius:12px;
     padding:40px;
-    border-radius:8px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
 }
 
-.countdown{
-    text-align:center;
-    font-size:2rem;
-    font-weight:600;
-    margin-top:30px;
+.card h3{
+    font-family:'Playfair Display', serif;
+    color:#d4b27a;
+    margin-bottom:15px;
+    font-size:1.5rem;
 }
+
+.card p{
+    color:#e8dfcf;
+}
+
+/* RSVP */
 
 .rsvp-form{
     display:grid;
-    gap:15px;
+    gap:18px;
 }
 
-input, select, textarea{
+input,
+select,
+textarea{
     width:100%;
-    padding:15px;
-    border:1px solid #ddd;
-    font-size:1rem;
-    border-radius:4px;
+    padding:16px;
+    border-radius:8px;
+    border:1px solid rgba(212,178,122,.2);
+    background:#111;
+    color:#e8dfcf;
     font-family:'Inter', sans-serif;
+    font-size:1rem;
+}
+
+input::placeholder,
+textarea::placeholder{
+    color:#9a9388;
 }
 
 button{
-    background:#1d1d1d;
-    color:white;
+    padding:18px;
     border:none;
-    padding:16px;
+    border-radius:8px;
+    background:#d4b27a;
+    color:#111;
+    font-weight:600;
     cursor:pointer;
-    font-size:1rem;
-    letter-spacing:1px;
+    letter-spacing:2px;
+    text-transform:uppercase;
 }
 
 button:hover{
     opacity:.9;
 }
 
+/* FOOTER */
+
 footer{
-    background:#111;
-    color:white;
+    border-top:1px solid rgba(212,178,122,.15);
     text-align:center;
-    padding:50px 20px;
+    padding:60px 20px;
+    background:#0a0a0a;
 }
 
-@media(max-width:700px){
+footer h2{
+    font-family:'Playfair Display', serif;
+    color:#d4b27a;
+    margin-bottom:10px;
+}
+
+footer p{
+    color:#b9b0a3;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
 
 .hero h1{
-    font-size:3rem;
-}
-
-nav ul{
-    gap:15px;
+    font-size:3.5rem;
 }
 
 .section h2{
-    font-size:2.2rem;
+    font-size:2.3rem;
+}
+
+.countdown{
+    font-size:1.8rem;
 }
 
 }
@@ -183,11 +244,15 @@ nav ul{
 
 <section class="hero">
     <div class="hero-content">
+
         <p>You are invited to the wedding of</p>
+
         <h1>Luke & Hiba</h1>
+
         <p>20 March 2027 · Auckland, New Zealand</p>
 
         <div class="countdown" id="countdown"></div>
+
     </div>
 </section>
 
@@ -229,16 +294,12 @@ nav ul{
 
         <div class="card">
             <h3>Flying In</h3>
-            <p>
-                Guests travelling from overseas should arrive via Auckland International Airport.
-            </p>
+            <p>Guests travelling from overseas should arrive via Auckland International Airport.</p>
         </div>
 
         <div class="card">
             <h3>Getting Around</h3>
-            <p>
-                Uber and taxis are widely available throughout Auckland City.
-            </p>
+            <p>Uber and taxis are widely available throughout Auckland.</p>
         </div>
 
     </div>
@@ -251,27 +312,23 @@ nav ul{
 
     <div class="card">
 
-        <p style="text-align:center;">
+        <p style="text-align:center; margin-bottom:30px;">
             <strong>Please RSVP by 1 September 2026</strong>
         </p>
 
-        <br>
-
         <form class="rsvp-form"
-              action="https://script.google.com/macros/s/AKfycbwSmB4MsoWDP_qREaQMqIDW04aipdr1h0nKPZWcCSXj7MaVhtyMBEo0H7D3a24e5eNCiw/exec"
-              method="POST">
+        action="https://script.google.com/macros/s/AKfycbwSmB4MsoWDP_qREaQMqIDW04aipdr1h0nKPZWcCSXj7MaVhtyMBEo0H7D3a24e5eNCiw/exec"
+        method="POST">
 
-            <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                required>
+            <input type="text"
+            name="name"
+            placeholder="Full Name"
+            required>
 
-            <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                required>
+            <input type="email"
+            name="email"
+            placeholder="Email Address"
+            required>
 
             <select name="attendance" required>
                 <option value="">Please Select</option>
@@ -279,20 +336,15 @@ nav ul{
                 <option value="Not Attending">Not Attending</option>
             </select>
 
-            <input
-                type="number"
-                name="guests"
-                placeholder="Number of Guests"
-                min="0">
+            <input type="number"
+            name="guests"
+            placeholder="Number of Guests">
 
-            <textarea
-                rows="5"
-                name="message"
-                placeholder="Dietary requirements or message"></textarea>
+            <textarea rows="5"
+            name="message"
+            placeholder="Dietary requirements or message"></textarea>
 
-            <button type="submit">
-                Send RSVP
-            </button>
+            <button type="submit">Send RSVP</button>
 
         </form>
 
@@ -307,15 +359,13 @@ nav ul{
     <div class="card">
 
         <p style="text-align:center;">
-            If you have any questions, please reach out to
-            <strong>Hiba or Luke</strong>.
+            If you have any questions, please reach out to <strong>Hiba or Luke.</strong>
         </p>
 
         <br>
 
         <p style="text-align:center;">
-            We are happy to help with travel, accommodation,
-            or anything else you may need.
+            We're happy to help with travel, accommodation, or anything else you may need.
         </p>
 
     </div>
@@ -325,6 +375,7 @@ nav ul{
 <footer>
 
     <h2>Luke & Hiba</h2>
+
     <p>20 March 2027 · Auckland, New Zealand</p>
 
 </footer>
@@ -338,7 +389,7 @@ function updateCountdown(){
     const now = new Date();
     const diff = weddingDate - now;
 
-    const days = Math.floor(diff/(1000*60*60*24));
+    const days = Math.floor(diff / (1000*60*60*24));
 
     document.getElementById("countdown").innerHTML =
     days + " days to go";
