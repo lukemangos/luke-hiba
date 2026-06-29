@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luke & Hiba | 20 March 2027</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter', sans-serif;
+    background:#f5f3ef;
+    color:#222;
+    line-height:1.7;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(20,20,20,0.95);
+    padding:20px 0;
+    z-index:1000;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:35px;
+    list-style:none;
+    flex-wrap:wrap;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:0.9rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.hero{
+    min-height:100vh;
+    background:
+      linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+      url('wedding-cake.jpg');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:5rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    letter-spacing:3px;
+}
+
+.section{
+    max-width:1000px;
+    margin:auto;
+    padding:100px 25px;
+}
+
+.section h2{
+    font-family:'Playfair Display', serif;
+    font-size:3rem;
+    margin-bottom:30px;
+    text-align:center;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:8px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.countdown{
+    text-align:center;
+    font-size:2rem;
+    font-weight:600;
+    margin-top:30px;
+}
+
+.rsvp-form{
+    display:grid;
+    gap:15px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    font-size:1rem;
+    border-radius:4px;
+    font-family:'Inter', sans-serif;
+}
+
+button{
+    background:#1d1d1d;
+    color:white;
+    border:none;
+    padding:16px;
+    cursor:pointer;
+    font-size:1rem;
+    letter-spacing:1px;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+    font-size:3rem;
+}
+
+nav ul{
+    gap:15px;
+}
+
+.section h2{
+    font-size:2.2rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="#details">Details</a></li>
+        <li><a href="#travel">Travel</a></li>
+        <li><a href="#rsvp">RSVP</a></li>
+        <li><a href="#contact">Questions</a></li>
+    </ul>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <p>You are invited to the wedding of</p>
+        <h1>Luke & Hiba</h1>
+        <p>20 March 2027 · Auckland, New Zealand</p>
+
+        <div class="countdown" id="countdown"></div>
+    </div>
+</section>
+
+<section class="section" id="details">
+
+    <h2>The Celebration</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Date</h3>
+            <p>Saturday, 20 March 2027</p>
+        </div>
+
+        <div class="card">
+            <h3>Location</h3>
+            <p>Various locations in Auckland City throughout the day.</p>
+        </div>
+
+        <div class="card">
+            <h3>Accommodation</h3>
+            <p>Handiest areas will be in Ponsonby, Grey Lynn, Freemans Bay.</p>
+        </div>
+
+        <div class="card">
+            <h3>Dress Code</h3>
+            <p>Not formal, but still chic x</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="travel">
+
+    <h2>Travel Information</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Flying In</h3>
+            <p>
+                Guests travelling from overseas should arrive via Auckland International Airport.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Getting Around</h3>
+            <p>
+                Uber and taxis are widely available throughout Auckland City.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="rsvp">
+
+    <h2>RSVP</h2>
+
+    <div class="card">
+
+        <p style="text-align:center;">
+            <strong>Please RSVP by 1 September 2026</strong>
+        </p>
+
+        <br>
+
+        <form class="rsvp-form"
+              action="https://script.google.com/macros/s/AKfycbwSmB4MsoWDP_qREaQMqIDW04aipdr1h0nKPZWcCSXj7MaVhtyMBEo0H7D3a24e5eNCiw/exec"
+              method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                required>
+
+            <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                required>
+
+            <select name="attendance" required>
+                <option value="">Please Select</option>
+                <option value="Attending">Attending</option>
+                <option value="Not Attending">Not Attending</option>
+            </select>
+
+            <input
+                type="number"
+                name="guests"
+                placeholder="Number of Guests"
+                min="0">
+
+            <textarea
+                rows="5"
+                name="message"
+                placeholder="Dietary requirements or message"></textarea>
+
+            <button type="submit">
+                Send RSVP
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<section class="section" id="contact">
+
+    <h2>Questions?</h2>
+
+    <div class="card">
+
+        <p style="text-align:center;">
+            If you have any questions, please reach out to
+            <strong>Hiba or Luke</strong>.
+        </p>
+
+        <br>
+
+        <p style="text-align:center;">
+            We are happy to help with travel, accommodation,
+            or anything else you may need.
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <h2>Luke & Hiba</h2>
+    <p>20 March 2027 · Auckland, New Zealand</p>
+
+</footer>
+
+<script>
+
+const weddingDate = new Date("March 20, 2027 15:00:00");
+
+function updateCountdown(){
+
+    const now = new Date();
+    const diff = weddingDate - now;
+
+    const days = Math.floor(diff/(1000*60*60*24));
+
+    document.getElementById("countdown").innerHTML =
+    days + " days to go";
+
+}
+
+updateCountdown();
+setInterval(updateCountdown,1000);
+
+</script>
+
+</body>
+</html>
